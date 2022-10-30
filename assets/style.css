@@ -1,0 +1,217 @@
+
+body{
+    padding: 0 36px;
+    max-width: 1824px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+}
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+}
+.top-bar svg{
+    width: 24px;
+    cursor: pointer;
+}
+.top-bar__item{
+    display: flex;
+    justify-content: space-evenly;
+}
+.top-bar__item a{
+    padding: 0 8px;
+    text-decoration: none;
+    color: #111;
+    position: relative;
+}
+.separate{
+    width: 0;
+    height: 14px;
+    border-right: 1px solid #999;
+    position: absolute;
+    right: 0;
+    top: 3px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    position: relative;
+}
+.nav svg{
+    width: 80px;
+    margin-left: -18px;
+    justify-self: start;
+    cursor: pointer;
+}
+.sub-nav{
+    margin: 0 575px;
+}
+.sub-nav a{
+    margin: 0 8px;
+    text-decoration: none;
+    color: #111;
+}
+.search-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+    height: 60px;
+    
+}
+.search-btn{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 180px;
+    height: 40px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    transform: translateX(0);
+    transition: transform 0.6s;
+    visibility: visible;
+    cursor: pointer;
+}
+.nike-search{
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+}
+.nike-search:hover{
+    background-color: #e5e5e5;
+}
+.search-btn .search-text{
+    color: rgba(139, 139, 139, 0.473);
+    font-size: 16px;
+    padding: 5px 80px 5px 10px;
+    margin: 0;
+    cursor: text;
+    border-radius: 20px;
+}
+.search-btn:hover .nike-search,
+.search-btn:hover {
+    background-color: #e5e5e5;
+    color: #000;
+}
+
+.fav-cart{
+    display: flex;
+    width: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner{
+    position: relative;
+}
+.banner img{
+    margin: 58px auto 0 ;
+    width: 1800px;
+}
+.noti{
+    width: 100%;
+    height: 280px;
+    background-color: #fff;
+    position: fixed;
+    z-index: 3;
+    top: 3%;
+    left: 0px;
+    padding: 12px 36px;
+    visibility: hidden;
+    opacity: 0;
+}
+.noti-bar{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.noti__search-bar input{
+    padding: 10px;
+    width: 90%;
+    outline: none;
+    border: none;
+    background-color: #f5f5f5;
+}
+.noti__search-bar:hover,
+.noti__search-bar:hover .ti-search,
+.noti__search-bar:hover input{
+    background-color: #e5e5e5;
+}
+.noti__search-bar{
+    display: flex;
+    align-items: center;
+    width: 650px;
+    height: 36px;
+    padding: 2px 0;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    position: relative;
+}
+.ti-search{
+    color: #666;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 50%;
+}
+.noti__cancel{
+    margin-right: 86px;
+}
+.noti__popular-search{
+    position: fixed;
+    top: 18%;
+    background-color: #fff;
+}
+.text{
+    font-size: 16px;
+    color: #757575;
+}
+.popular-item{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.popular-item li{
+    color: #111;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+.overplay{
+    position: fixed;
+    z-index: 2;
+    top: 0;right: 0;left: 0;bottom: 0;
+    background-color: rgba(0, 0, 0, 0.308);
+    opacity: 0;
+    visibility: hidden;
+    backdrop-filter: blur(6px);
+}
+.haha{
+    font-size: 50px;
+    font-style: italic;
+    position: absolute;
+    top: 37%;
+    right: 40.5%;
+    text-shadow: 2px 2px 1px #fff;
+    font-weight: 700;
+}
+
+/* Script nhưng nó lạ lắm */
+#show-noti:checked ~ .noti{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-28px);
+    transition: opacity ease-in 0.3s, transform 0.6s;
+}
+#show-noti:checked ~ .overplay{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.6s;
+}
+#show-noti:checked ~ .search-btn{
+    transform: translateX(-840px);
+    visibility: hidden;
+    transition: transform 0.3s , visibility 0.1s;
+}
+#show-noti:checked ~ .nav-svg{
+    margin-top: -28px;
+}
