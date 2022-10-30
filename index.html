@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Trà Ô lông Ti lết đã ngon lại cong miễn phí link dưới bài viết">
-    <meta property="og:image" content="images.jpg">
-    <title>Thèm ô lông quá</title>
+    <meta property="og:image" content="assets/images.jpg">
+    <title>Thèm ô lông</title>
     <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="icon" type="image/x-icon" href="./assets/favicon29.ico">
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                     <label for="show-noti" class="noti__cancel">
-                        <p>Cancer</p>
+                        <p>Cancel</p>
                     </label>
                 </div>
                 
@@ -88,14 +88,29 @@
                 <h1>Miễn Phí</h1>
             </div>
         </div>
+
     </header>
+    <h1 class="tra">https://shopee.vn/Tr%C3%A0-olong-Tea-plus-chai-l%E1%BB%9Bn-1L-(v%E1%BB%8B-truy%E1%BB%81n-th%E1%BB%91ng-v%E1%BB%8B-chanh)-i.87701528.15649700071?sp_atk=09726f77-c342-47ef-9b46-55d5a3d52245&xptdk=09726f77-c342-47ef-9b46-55d5a3d52245</h1>
+
 </body>
 <script>
-    const cancer = document.querySelector('.search-btn')
+    const cancel = document.querySelector('.search-btn')
     const popular = document.querySelector('.popular-item')
+    const closeef = document.querySelectorAll('.overplay')
+    const cancelef = document.querySelector('.noti__cancel')
     function animate () {
         popular.classList.add('ani')
+        cancelef.classList.add('cancel-ani')
     }
-    cancer.addEventListener('click', animate)
+    function closeanimate () {
+        popular.classList.remove('ani')
+        cancelef.classList.remove('cancel-ani')
+    }
+    
+    cancel.addEventListener('click', animate)
+    for (const closeEF of closeef){
+        closeEF.addEventListener('click', closeanimate)
+    }
+    
 </script>
 </html>

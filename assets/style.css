@@ -156,6 +156,12 @@ body{
 }
 .noti__cancel{
     margin-right: 86px;
+    cursor: pointer;
+    opacity: 0;
+}
+.noti__cancel.cancel-ani{
+    opacity: 1;
+    transition: opacity ease-out 3s;
 }
 .noti__popular-search{
     position: fixed;
@@ -173,16 +179,17 @@ body{
 }
 .popular-item.ani{
     display: block;
-    animation: ani ease 1s;
+    transform-origin: 0% top;
+    animation: ani ease-in 0.4s;
 }
 @keyframes ani {
     from{
         opacity: 0;
-        transform: scale(0);
+        transform: translateY(-25px);
     }
     to{
         opacity: 1;
-        transform: scale(1);
+        transform: translateY(0);
     }
 }
 .popular-item li{
@@ -226,6 +233,6 @@ body{
     visibility: hidden;
     transition: transform 0.3s , visibility 0.1s;
 }
-#show-noti:checked ~ .nav-svg{
-    margin-top: -28px;
+.tra{
+    color: rgb(255, 115, 0);
 }
