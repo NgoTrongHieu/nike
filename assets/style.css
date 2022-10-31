@@ -10,7 +10,7 @@ body{
     justify-content: space-between;
 }
 .top-bar svg{
-    width: 24px;
+    width: 1%;
     cursor: pointer;
 }
 .top-bar__item{
@@ -29,7 +29,6 @@ body{
     border-right: 1px solid #999;
     position: absolute;
     right: 0;
-    top: 3px;
 }
 .nav{
     display: flex;
@@ -39,32 +38,21 @@ body{
     position: relative;
 }
 .nav svg{
-    width: 80px;
-    margin-left: -18px;
+    width: 114%;
+    margin-left: -6px;
     justify-self: start;
     cursor: pointer;
-}
-.sub-nav{
-    margin: 0 575px;
 }
 .sub-nav a{
     margin: 0 8px;
     text-decoration: none;
     color: #111;
 }
-.search-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 240px;
-    height: 60px;
-    
-}
 .search-btn{
     display: flex;
     justify-content: start;
     align-items: center;
-    width: 180px;
+    width: 10%;
     height: 40px;
     background-color: #f5f5f5;
     border-radius: 20px;
@@ -84,7 +72,7 @@ body{
 .search-btn .search-text{
     color: rgba(139, 139, 139, 0.473);
     font-size: 16px;
-    padding: 5px 80px 5px 10px;
+    padding: 5px 20px 5px 10px;
     margin: 0;
     cursor: text;
     border-radius: 20px;
@@ -97,16 +85,18 @@ body{
 
 .fav-cart{
     display: flex;
-    width: 40px;
+    width: 3%;
     justify-content: space-between;
     align-items: center;
 }
 .banner{
+    margin: 58px auto 0 ;
+    max-width: 1824px;
+    width: 100%;
     position: relative;
 }
 .banner img{
-    margin: 58px auto 0 ;
-    width: 1800px;
+    width: 100%;
 }
 .noti{
     width: 100%;
@@ -118,7 +108,7 @@ body{
     left: 0px;
     padding: 12px 36px;
     visibility: hidden;
-    opacity: 0;
+    transform: translateY(8px);
 }
 .noti-bar{
     height: 40px;
@@ -157,11 +147,19 @@ body{
 .noti__cancel{
     margin-right: 86px;
     cursor: pointer;
-    opacity: 0;
 }
 .noti__cancel.cancel-ani{
-    opacity: 1;
-    transition: opacity ease-out 3s;
+    animation: cancelani 0.4s;
+}
+@keyframes cancelani {
+    from{
+        visibility: hidden;
+        transform: scale(0);
+    }
+    to{
+        visibility: visible;
+        transform: scale(1);
+    }
 }
 .noti__popular-search{
     position: fixed;
@@ -184,12 +182,12 @@ body{
 }
 @keyframes ani {
     from{
-        opacity: 0;
-        transform: translateY(-25px);
+        visibility: hidden;
+        transform: scaleY(0);
     }
     to{
-        opacity: 1;
-        transform: translateY(0);
+        visibility: visible;
+        transform: scaleY(1);
     }
 }
 .popular-item li{
@@ -206,22 +204,14 @@ body{
     visibility: hidden;
     backdrop-filter: blur(6px);
 }
-.haha{
-    font-size: 50px;
-    font-style: italic;
-    position: absolute;
-    top: 37%;
-    right: 40.5%;
-    text-shadow: 2px 2px 1px #fff;
-    font-weight: 700;
+.banner-img{
+    width: 100%;
 }
-
 /* Script nhưng nó lạ lắm */
 #show-noti:checked ~ .noti{
     visibility: visible;
-    opacity: 1;
     transform: translateY(-28px);
-    transition: opacity ease-in 0.3s, transform 0.6s;
+    transition: visibility ease-in 0.3s, transform 0.4s;
 }
 #show-noti:checked ~ .overplay{
     opacity: 1;
@@ -229,10 +219,13 @@ body{
     transition: opacity 0.6s;
 }
 #show-noti:checked ~ .search-btn{
-    transform: translateX(-840px);
+    transform: translateX(-300%);
     visibility: hidden;
     transition: transform 0.3s , visibility 0.1s;
 }
 .tra{
     color: rgb(255, 115, 0);
+    font-size: 100px;
+    display: block;
+    text-align: center;
 }

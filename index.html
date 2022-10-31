@@ -26,11 +26,15 @@
 
         <div class="nav">
             <input type="checkbox" hidden id="show-noti">
-            <label for="show-noti" class="overplay"></label>
+            <label for="show-noti" class="overplay js-close"></label>
             <div class="nav-svg">
                 <svg aria-hidden="true" class="pre-logo-svg" focusable="false" viewBox="0 0 24 24" role="img" width="60px" height="60px" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M21 8.719L7.836 14.303C6.74 14.768 5.818 15 5.075 15c-.836 0-1.445-.295-1.819-.884-.485-.76-.273-1.982.559-3.272.494-.754 1.122-1.446 1.734-2.108-.144.234-1.415 2.349-.025 3.345.275.2.666.298 1.147.298.386 0 .829-.063 1.316-.19L21 8.719z" clip-rule="evenodd"></path>
                 </svg>
             </div>
+            <div class="blank"></div>
+            <div class="blank"></div>
+            <div class="blank"></div>
+            <div class="blank"></div>
             
             <div class="sub-nav">
                 <a href="">Men</a>
@@ -40,6 +44,9 @@
                 <a href="">Sale</a>
                 <a href="">SNKRS</a>
             </div>
+
+            <div class="blank"></div>
+            <div class="blank"></div>
             
             <div class="search-btn">
                 <label for="show-noti" class="ti-search nike-search"></label>
@@ -71,7 +78,7 @@
                             </ul>
                         </div>
                     </div>
-                    <label for="show-noti" class="noti__cancel">
+                    <label for="show-noti" class="noti__cancel js-close">
                         <p>Cancel</p>
                     </label>
                 </div>
@@ -82,10 +89,8 @@
 
 
         <div class="banner">
-            <img src="./assets/Tea _KV_H_FA.png" alt="">
-            <div class="haha">
-                <p>_______</p>
-                <h1>Miễn Phí</h1>
+            <div class="banner-img">
+                <img src="./assets/Tea _KV_H_FA.png" alt="">
             </div>
         </div>
 
@@ -96,7 +101,7 @@
 <script>
     const cancel = document.querySelector('.search-btn')
     const popular = document.querySelector('.popular-item')
-    const closeef = document.querySelectorAll('.overplay')
+    const closeef = document.querySelectorAll('.js-close')
     const cancelef = document.querySelector('.noti__cancel')
     function animate () {
         popular.classList.add('ani')
@@ -108,6 +113,7 @@
     }
     
     cancel.addEventListener('click', animate)
+
     for (const closeEF of closeef){
         closeEF.addEventListener('click', closeanimate)
     }
